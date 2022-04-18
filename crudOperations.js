@@ -51,7 +51,7 @@ const editTodoItem = async (id, editedAttributes) => {
     for(const attributeKey in editedAttributes){
         items[itemIndex][attributeKey] = editedAttributes[attributeKey];
     }
-    await updateItems(items);
+    updateItems(items);
 }
 
 

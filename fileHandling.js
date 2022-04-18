@@ -4,9 +4,9 @@ const fsPromises = fs.promises;
 const itemsFilePath = './DB/items.json';
 const metaDataFilePath = './DB/metadata.json'
 
-const updateItems = async (newList) => {
+const updateItems = (newList) => {
     const newListStringfied = JSON.stringify(newList, null, 4);
-    await fs.writeFile(itemsFilePath, newListStringfied, () => {});
+    fs.writeFile(itemsFilePath, newListStringfied, () => {});
 }
 
 const getItems = async () => {
@@ -27,9 +27,9 @@ const getMetaData = async () =>{
     return metadata;
 }
 
-const updateMetaData = async (metadata) =>{
+const updateMetaData = (metadata) =>{
     const metadataStringfied = JSON.stringify(metadata, null, 4);
-    await fs.writeFile(metaDataFilePath, metadataStringfied, () => {});
+    fs.writeFile(metaDataFilePath, metadataStringfied, () => {});
 }
 
 module.exports = {updateItems, getItems, getMetaData, updateMetaData}
