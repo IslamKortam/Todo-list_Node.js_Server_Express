@@ -61,6 +61,7 @@ router.post('/', async (req, res) => {
 })
 
 
+/* ***************************************Editig*********************************** */
 router.put('/:id', async (req, res) => {
     const id = +req.params.id;
     let editedAttributes = req.body;
@@ -78,6 +79,7 @@ router.put('/:id', async (req, res) => {
     }
 })
 
+/* ***************************************Deleting*********************************** */
 router.delete('/:id', async (req, res) => {
     const id = +req.params.id;
 
